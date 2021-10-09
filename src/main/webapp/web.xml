@@ -1,0 +1,17 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+<!-- это конфигурационный файл в котором мы указываем как должен работать наш web - приложение,
+     находится по адресу src/main/webapp/web.xml-->
+
+    <servlet> <!-- конфигурируем Servlet-->
+        <servlet-name>indexController</servlet-name> <!--Имя нашего Servlet-->
+        <servlet-class>tomcat.controller.IndexController</servlet-class><!-- Путь к классу контроллера-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>indexController</servlet-name>
+        <url-pattern>/index</url-pattern> <!--указываем по какой URL будет доступна наша страничка-->
+    </servlet-mapping>
+</web-app>
