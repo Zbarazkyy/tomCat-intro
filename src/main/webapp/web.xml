@@ -9,9 +9,12 @@
     <servlet> <!-- конфигурируем Servlet-->
         <servlet-name>indexController</servlet-name> <!--Имя нашего Servlet-->
         <servlet-class>tomcat.controller.IndexController</servlet-class><!-- Путь к классу контроллера-->
+        <load-on-startup>1</load-on-startup> <!--позволяет создать объект сервлета на моменте поднятия web приложения, используется если создание сервлета очень ресурс затратное и затратно по времени  -->
     </servlet>
     <servlet-mapping>
         <servlet-name>indexController</servlet-name>
         <url-pattern>/index</url-pattern> <!--указываем по какой URL будет доступна наша страничка-->
     </servlet-mapping>
+
+    <!-- не меппили ItemsController в web.xml, мі указали над классом аннотацию @WebServlet(urlPatterns = "/items")-->
 </web-app>

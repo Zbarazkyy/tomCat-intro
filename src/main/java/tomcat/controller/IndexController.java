@@ -14,5 +14,7 @@ public class IndexController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(req, resp);  /* указываем какую именно страничку возвращаем */
+       /* RequestDispatcher Интерфейс объект которого перенаправляет наш запрос на другой ресурс (Servlet, jsp page, html file) указав путь*/
+       /*.forward перенаправляет запрос на ресурс */
     }
 }
